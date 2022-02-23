@@ -9,6 +9,9 @@ public class Acceso : MonoBehaviour
     private InputField inputUsuario, inputClave;
     private Text textoError;
     
+    //Variable para el script de GameManager
+    private GameManager scriptGameManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,8 @@ public class Acceso : MonoBehaviour
         {
             //Cargo la escena de juego
             SceneManager.LoadScene("Juego");
+            
+            
         }
         else
         {

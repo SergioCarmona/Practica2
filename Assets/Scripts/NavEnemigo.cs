@@ -1,16 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavEnemigo : MonoBehaviour
-{
-    
+public class NavEnemigo : MonoBehaviour {
+
     NavMeshAgent agente;
     GameObject jugador;
     private MeshRenderer meshRenderer;
+    public int vidas;
 
+    //Variable para el script de GameManager
+    private GameManager scriptGameManager;
     void Start () {
+            
+        
+
+        scriptGameManager = GameObject.FindObjectOfType<GameManager>();
 
         //Busco el jugador
         jugador = GameObject.Find("Jugador");
@@ -47,21 +51,44 @@ public class NavEnemigo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
+        if (other.gameObject.tag == "Trampa2")
+        {
+           
+
+            Destroy(gameObject);
+        }
+
         //Si se choca con el jugador
         if (other.gameObject.tag == "Jugador")
         {
             if (jugador.GetComponent<Jugador>().huir)
             {
-                //Destruyo al enemigo
+                
                 Destroy(gameObject);
+                
             }
             else
             {
-                //Destruyo al jugador
-                Destroy(other.gameObject);
+                
+                quitarVida();
+                
                 //Paro el tiempo del juego para que no se creen más enemigos
                 Time.timeScale = 0;
             }
         }
+
+
     }
+    
+    
+    void quitarVida(){
+
+        //Resto una vida
+        vidas--;
+        //Actualizo el contador de vidas
+        
+    }
+    
+    
 }

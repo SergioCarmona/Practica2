@@ -52,14 +52,28 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\GameManager2.cs" />
      <Compile Include="Assets\Scripts\CamaraController.cs" />
+     <Compile Include="Assets\Scripts\Creditos.cs" />
+     <Compile Include="Assets\Scripts\Usuario.cs" />
+     <Compile Include="Assets\Scripts\Vidas.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\BotonPausa.cs" />
      <Compile Include="Assets\Scripts\Acceso.cs" />
      <Compile Include="Assets\Scripts\Trampa.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\NavJugador.cs" />
+     <Compile Include="Assets\Scripts\AccesoApi.cs" />
      <Compile Include="Assets\Scripts\DestruirPorTiempo.cs" />
+     <Compile Include="Assets\Scripts\VolcadoApi.cs" />
+     <Compile Include="Assets\Scripts\Partida.cs" />
+     <Compile Include="Assets\Scripts\GameManager1.cs" />
+     <Compile Include="Assets\Scripts\Disparo.cs" />
+     <Compile Include="Assets\Scripts\Rotatoria.cs" />
+     <Compile Include="Assets\Scripts\Tiempo.cs" />
      <Compile Include="Assets\Scripts\Jugador.cs" />
      <Compile Include="Assets\Scripts\NavEnemigo.cs" />
+     <Compile Include="Assets\Scripts\DisparadorController.cs" />
+     <Compile Include="Assets\Scripts\JsonHelper.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -283,7 +297,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Usuario/Practica2/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -631,34 +645,34 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Usuario/Practica2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Downloads/Practica_2/Practica2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

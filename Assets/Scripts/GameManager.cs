@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -9,14 +10,45 @@ public class GameManager : MonoBehaviour {
   public float esperaInicial;
   public float esperaEntreEnemigos;
   public float esperaEntreOlas, esperaEntreColeccionables;
+  public int vidas = 3;
+   public int muertos = 0;
+   public string usuario;
+   public bool isPausa;
+   public bool isDisparo;
 
   void Start() {  
+  vidas = 3;
+  muertos = 90;
+  usuario = "";
+  isDisparo = false;
 
+  
+    //Busco el objeto llamado GameManager
+    GameObject gameManager = GameObject.Find("GameManager");
+
+    //Le indico que no se destruya al cargar otra escena 
+    DontDestroyOnLoad(gameManager);
+
+    //Cargo la escena de inicio
+    cambiarEscena("Inicio");
+   // SceneManager.LoadScene("Inicio");
+    
     //LLamo a la rutina de crear enemigos
     StartCoroutine(crearEnemigos());
 
     //LLamo a la rutina de crear coleccionables
     StartCoroutine(crearColeccionables());
+    
+    //Le indico que no se destruya al cargar otra escena 
+    DontDestroyOnLoad(gameManager);
+
+
+   
+
+    if (vidas<1)
+    {
+      //SceneManager.LoadScene("Inicio");
+    }
 
     }
 		
@@ -59,6 +91,27 @@ public class GameManager : MonoBehaviour {
       yield return new WaitForSeconds(esperaEntreColeccionables);
     }
 
+  }
+  
+  
+  public void cambiarEscena(string nombreEscena){
+
+    SceneManager.LoadScene(nombreEscena);
+		
+  }
+  
+  public void pausar()
+  {
+    if (!isPausa)
+    {
+      Time.timeScale = 0;
+    }
+    else
+    {
+      Time.timeScale = 1;
+    }
+    //cambio el valor del Booleano
+    isPausa = !isPausa;
   }
 
 }
